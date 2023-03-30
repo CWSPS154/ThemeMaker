@@ -109,7 +109,8 @@ The mytheme_layout.blade.php
 
 ## Change Log
 - v1.0.0 - Initial Version
-- v1.0.1 - Package dependency changed
+- v1.0.1 - Package dependency changed, config file introduced and bug fixes
+- v1.0.2 - Bugfixes
 
 ## Author
 
