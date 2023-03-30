@@ -106,11 +106,43 @@ The mytheme_layout.blade.php
     </body>
     </html>
 ```
+### To publishing the config file
+```bash
+ php artisan vendor:publish --tag=config
+```
+Create a new ENV variable LAYOUT and set your layout name Or you can update this config file directly
+```bash
+return [
+    'layout' => env('LAYOUT')
+];
+```
+### Use the layout in blade pages
+```bash
+@extends(config('theme.layout'))
+@push('styles')
+
+  \\Custom CSS
+  
+@endpush
+@section('content')
+
+  \\Blade Contant
+  
+@endsection
+@push('scripts')
+
+  \\Custom Scripts
+  
+@endpush
+```
 
 ## Change Log
 - v1.0.0 - Initial Version
 - v1.0.1 - Package dependency changed, config file introduced and bug fixes
 - v1.0.2 - Bugfixes
+- v1.0.3 - Bugfixes
+- v1.0.4 - Bugfixes
+- v1.0.5 - ReadMe Updated
 
 ## Author
 
