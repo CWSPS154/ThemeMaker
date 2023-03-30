@@ -132,7 +132,7 @@ class ThemeMakerCommand extends Command
      */
     private function makeLayout($theme, $components): void
     {
-        $path=resource_path('views/layout/'.$theme.'/'.$theme.'_layout.blade.php');
+        $path=resource_path('views/layouts/'.$theme.'/'.$theme.'_layout.blade.php');
         $this->makeDirectory(dirname($path));
         $contents=$this->createLayout($theme,$components);
         if (!$this->files->exists($path)) {

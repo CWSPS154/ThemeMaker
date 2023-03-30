@@ -1,4 +1,4 @@
-# cwsps154/theme-maker
+# ThemeMaker
 <a href="https://github.com/CWSPS154/ThemeMaker/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/CWSPS154/bootstrap-ui-components"></a>
 <a href="https://github.com/CWSPS154/ThemeMaker/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/CWSPS154/bootstrap-ui-components"></a>
 <a href="https://github.com/CWSPS154/ThemeMaker"><img alt="GitHub license" src="https://img.shields.io/github/license/CWSPS154/bootstrap-ui-components"></a>
@@ -106,6 +106,10 @@ The mytheme_layout.blade.php
     </body>
     </html>
 ```
+
+## Change Log
+- v1.0.0 - Initial Version
+- v1.0.1 - Package dependency changed
 
 ## Author
 
