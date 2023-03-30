@@ -51,14 +51,16 @@ class ThemeMakerCommand extends Command
         $components = $this->choice(
             'What are the components you want to build your theme? (Multiple options are separate by comma)',
             array_merge($options,['All']),10,2,true);
+        $additional=null;
         if ($this->confirm('Do you want any additional components', true)) {
             $additional = $this->ask('Please enter the name of the components (Multiple values are separate by comma)');
-            if(isset($components[0])=='All')
-            {
-                $components=array_merge($options,explode(",",$additional));
-            }else{
-                $components=array_merge($components,explode(",",$additional));
-            }
+        }
+        if(isset($components[0]) && $components[0]=='All' && $additional){
+            $components = array_merge($options, explode(",", $additional));
+        } elseif (isset($components[0]) && $components[0]=='All'){
+            $components = $options;
+        }elseif ($additional) {
+            $components = array_merge($components, explode(",", $additional));
         }
         $this->output->progressStart(count($components));
         for ($i = 0; $i < count($components); $i++) {
